@@ -34,25 +34,6 @@
         min-height: 100vh;
       }
 
-      .header {
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 80px;
-        background: var(--white);
-        border-bottom: 3px solid transparent;
-        border-image: linear-gradient(to right,
-            yellow 33.4%,
-            green 33.4%, green 66.6%,
-            red 66.6%);
-        border-image-slice: 1;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 2rem;
-        z-index: 1000;
-      }
-
       .logo {
         height: 50px;
         object-fit: contain;
@@ -151,66 +132,16 @@
         font-size: 1rem;
       }
 
-      .footer {
-        border-top: 3px solid;
-        border-image: linear-gradient(to right,
-            yellow 33.4%,
-            green 33.4%, green 66.6%,
-            red 66.6%) 1;
-        background: linear-gradient(135deg, var(--primary-green) 0%, #1e4a5f 100%);
-        color: white;
-        padding: 3rem 0 1rem 0;
-        margin-top: auto;
-        width: 100vw !important;
-        max-width: 100vw !important;
-        margin-left: calc(50% - 50vw) !important;
-        margin-bottom: 0 !important;
-      }
-
-      .footer-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        text-align: center;
-      }
-
-      .footer-section h3 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-        color: var(--cream);
-      }
-
-      .footer-section p {
-        margin-bottom: 0.5rem;
-        opacity: 0.9;
-      }
-
-      .footer-section i {
-        margin-right: 0.5rem;
-        color: #FFD700;
-      }
-
-      .footer-bottom {
-        text-align: center;
-        margin-top: 2rem;
-        padding-top: 2rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
-        opacity: 0.8;
-      }
-
       .news-container {
-      display: inline-block;
-      width: calc(50% - 0.2%); 
-      vertical-align: top;
-      box-sizing: border-box;
+        display: inline-block;
+        width: calc(50% - 0.2%);
+        vertical-align: top;
+        box-sizing: border-box;
       }
 
-     .news-container:nth-child(2n) {
-      margin-right: 0%;
+      .news-container:nth-child(2n) {
+        margin-right: 0%;
       }
-
 
       .news-featured {
         background: white;
@@ -284,10 +215,6 @@
       }
 
       @media (max-width: 768px) {
-        .header {
-          padding: 0 1rem;
-        }
-
         .news-container {
           width: 100%;
         }
@@ -331,16 +258,13 @@
         .news-container {
           width: 100%;
         }
-
-        .footer-content {
-          grid-template-columns: 1fr;
-          text-align: center;
-        }
       }
     </style>
   </head>
 
   <body>
+
+    <div id="header-placeholder"></div>
 
     <div vw class="enabled">
       <div vw-access-button class="active"></div>
@@ -353,27 +277,6 @@
         avatar: 'Icaro'
       });
     </script>
-
-    <header class="header">
-      <a href="https://sttransestatistica-netizen.github.io/teste-site3/" style="text-decoration: none; color: inherit;">
-        <img src="https://images.weserv.nl/?url=drive.google.com/uc%3Fexport%3Dview%26id%3D1Nc6KgvZjYE9h2eAvwmm0QhfisXbtYV28&amp;output=png&amp;bg=ffffff" alt="Logo STTRANS" class="logo" style="display: block;">
-      </a>
-
-      <a href="https://sttransestatistica-netizen.github.io/teste-site3/" style="text-decoration: none; color: inherit;">
-        <div class="service-card" style="display: inline-flex; align-items: center; width: auto; padding: 5px 10px;
-                        position: fixed; top: 5px; left: 50%; transform: translateX(-50%);
-                        z-index: 1000; background: white; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
-          <div class="service-card-icon" style="width: 28px; height: 28px; font-size: 1rem; display: flex; align-items: center; justify-content: center;">
-            <i class="fas fa-home"></i>
-          </div>
-          <div class="service-card-text" style="margin-left: -14px; font-size: 1rem;"></div>
-        </div>
-      </a>
-
-      <a href="https://www.queimadas.pb.gov.br/" rel="noopener">
-        <img src="https://queimadas.pb.gov.br/storage/configuracoes/67b8a0e9b0ef81fhlt.png" alt="Logo Queimadas" class="logo" style="display: block;">
-      </a>
-    </header>
 
     <main class="main">
 
@@ -452,38 +355,20 @@
 
       </section>
 
+      <div id="footer"></div>
+
     </main>
 
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3><i class="fas fa-building"></i> STTRANS</h3>
-          <p>Superintendência de Trânsito e Transportes de Queimadas</p>
-        </div>
-
-        <div class="footer-section">
-          <h3><i class="fas fa-map-marker-alt"></i> Endereço</h3>
-          <p><i class="fas fa-map-marker-alt"></i> Rua Miguel Benicio de Melo, 74 - Centro, Queimadas</p>
-          <p><i class="fas fa-phone"></i> Telefone Para Contato: Em Breve</p>
-          <p><i class="fas fa-envelope"></i> E-mail: Em Breve</p>
-        </div>
-
-        <div class="footer-section">
-          <h3><i class="fas fa-clock"></i> Horário de Funcionamento</h3>
-          <p><i class="fas fa-calendar-day"></i> Segunda à Sexta</p>
-          <p><i class="fas fa-clock"></i> 07:00 às 14:00</p>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
-          <img src="https://images.weserv.nl/?url=drive.google.com/uc%3Fexport%3Dview%26id%3D1Nc6KgvZjYE9h2eAvwmm0QhfisXbtYV28&output=png&bg=transparent" alt="Logo STTRANS" style="height: 60px; object-fit: contain;">
-        </div>
-        <p>© 2025 | Todos os direitos reservados</p>
-        <p><strong>Serviço Digital. Sua vida mais fácil!</strong></p>
-      </div>
-    </footer>
-
+    <script>
+      fetch("https://sttransestatistica-netizen.github.io/teste-site6/")
+        .then(res => res.text())
+        .then(data => document.getElementById("footer").innerHTML = data);
+      fetch("https://sttransestatistica-netizen.github.io/teste-site7/")
+        .then(r => r.text())
+        .then(html => {
+          document.getElementById("header-placeholder").innerHTML = html;
+        });
+    </script>
   </body>
 
 </html>
